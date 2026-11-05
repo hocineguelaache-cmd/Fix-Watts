@@ -1,0 +1,8 @@
+# Accès web interdit à ce dossier (schéma SQL et scripts d'installation)
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>

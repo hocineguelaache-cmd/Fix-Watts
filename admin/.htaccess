@@ -1,0 +1,10 @@
+# Accès web interdit : la page hash.php de ce dossier crée des comptes
+# sans aucune authentification et ne doit jamais être accessible en ligne.
+# Pour créer un compte professionnel, utilise : php database/create_admin.php
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
